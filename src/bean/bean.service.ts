@@ -6,11 +6,13 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { HandleError } from '@/common/HandleError';
+import { CloudinaryService } from '@/cloudinary/cloudinary.service';
 
 @Injectable()
 export class BeanService {
   constructor(
-    @InjectModel('Bean') private readonly beanModel: Model<BeanDocument>
+    @InjectModel('Bean') private readonly beanModel: Model<BeanDocument>,
+    private cloudinaryService: CloudinaryService
   ) {}
 
   async getAllWithoutDeleted(
@@ -188,7 +190,13 @@ export class BeanService {
     };
   }
 
-  async create(createDto: CreateBeanDto) {
+  async create(
+    image: Express.Multer.File,
+    createDto: {
+      name: string;
+      attributes: string;
+    }
+  ) {
     const idInName = createDto.name.trim().split('#')[1];
     if (createDto.name.trim().indexOf('#') === -1 || !idInName) {
       return new HandleError(
@@ -209,13 +217,18 @@ export class BeanService {
         `bean #${idInName} existed`
       );
     }
-    const { image, attributes } = createDto;
+    const charUpload = await this.cloudinaryService.uploadImage(image);
+    if (!charUpload) {
+      return new HandleError();
+    }
+    const { attributes } = createDto;
     const newItem = await this.beanModel.create({
       name: 'Bean #' + idInName,
-      image,
+      image: charUpload.secure_url,
       attributes: JSON.parse(attributes),
+      public_id: charUpload.public_id,
     });
-    if (newItem) return new HandleError();
+    if (!newItem) return new HandleError();
     return {
       success: true,
       message: `create bean ${idInName} success`,

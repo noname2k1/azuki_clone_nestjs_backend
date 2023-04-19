@@ -13,10 +13,10 @@ import {
   Put,
   Query,
   Request,
-  UseGuards,
+  // UseGuards,
 } from '@nestjs/common';
-import { RolesGuard } from '@/guards/roles.guard';
-import { Roles } from '@/decorators/roles.decorator';
+// import { RolesGuard } from '@/guards/roles.guard';
+// import { Roles } from '@/decorators/roles.decorator';
 
 @Controller('bean')
 // @UseGuards(RolesGuard)
@@ -42,10 +42,10 @@ export class BeanController {
     return this.beanService.getOne(id);
   }
 
-  @Post()
-  create(@Body() createDto: CreateBeanDto) {
-    return this.beanService.create(createDto);
-  }
+  // @Post()
+  // create(@Body() createDto: CreateBeanDto) {
+  //   return this.beanService.create(createDto);
+  // }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() updateDto: UpdateBeanDto) {

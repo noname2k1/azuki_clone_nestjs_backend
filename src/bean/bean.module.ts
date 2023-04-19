@@ -5,6 +5,7 @@ import { BeanController } from './bean.controller';
 import { BeanSchema } from '@/schemas/Bean.schema';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { CloudinaryModule } from '@/cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         schema: BeanSchema,
       },
     ]),
+    CloudinaryModule,
     // JwtModule.registerAsync({
     //   imports: [ConfigModule],
     //   useFactory: async (configService: ConfigService) => ({

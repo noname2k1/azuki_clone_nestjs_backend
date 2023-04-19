@@ -25,6 +25,7 @@ import { SongService } from '@/song/song.service';
 import { UsersService } from '@/users/users.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { SongDto } from '@/Dtos/SongDto';
+import { BeanService } from '@/bean/bean.service';
 
 @Controller('admin')
 @UseGuards(RolesGuard)
@@ -32,18 +33,13 @@ import { SongDto } from '@/Dtos/SongDto';
 export class AdminController {
   constructor(
     private readonly azukiService: AzukiService,
+    private readonly beanService: BeanService,
     private adminService: AdminService,
     private songService: SongService,
     private userService: UsersService
   ) {}
 
   // Azuki
-  @Roles('admin', 'mod')
-  @Get('/azuki')
-  getAzuki() {
-    return this.azukiService.getAll();
-  }
-
   @Roles('admin', 'mod')
   @Post('/azuki')
   @UseInterceptors(FileInterceptor('image'))
@@ -64,6 +60,29 @@ export class AdminController {
     }
   ) {
     return this.azukiService.create(image, data);
+  }
+
+  //beanz
+  @Roles('admin', 'mod')
+  @Post('/beanz')
+  @UseInterceptors(FileInterceptor('image'))
+  async addBeanz(
+    @UploadedFile(
+      new ParseFilePipe({
+        validators: [
+          new MaxFileSizeValidator({ maxSize: 1000000 }), // <= 1mb
+          new FileTypeValidator({ fileType: 'image' }),
+        ],
+      })
+    )
+    image: Express.Multer.File,
+    @Body()
+    data: {
+      name: string;
+      attributes: string;
+    }
+  ) {
+    return this.beanService.create(image, data);
   }
 
   @Roles('admin', 'mod')
