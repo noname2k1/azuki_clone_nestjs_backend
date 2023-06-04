@@ -16,7 +16,7 @@ import {
   // UseGuards,
 } from '@nestjs/common';
 // import { RolesGuard } from '../guards/roles.guard';
-// import { Roles } from '@/decorators/roles.decorator';
+// import { Roles } from '../decorators/roles.decorator';
 
 @Controller('bean')
 // @UseGuards(RolesGuard)

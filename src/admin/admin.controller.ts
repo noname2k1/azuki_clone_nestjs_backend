@@ -1,4 +1,4 @@
-import { AzukiService } from '@/azuki/azuki.service';
+import { AzukiService } from '../azuki/azuki.service';
 import {
   Controller,
   Get,
@@ -19,13 +19,13 @@ import {
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { UseGuards } from '@nestjs/common';
 import { RolesGuard } from '../guards/roles.guard';
-import { Roles } from '@/decorators/roles.decorator';
+import { Roles } from '../decorators/roles.decorator';
 import { AdminService } from './admin.service';
-import { SongService } from '@/song/song.service';
-import { UsersService } from '@/users/users.service';
+import { SongService } from '../song/song.service';
+import { UsersService } from '../users/users.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { SongDto } from '../Dtos/SongDto';
-import { BeanService } from '@/bean/bean.service';
+import { BeanService } from '../bean/bean.service';
 
 @Controller('admin')
 @UseGuards(RolesGuard)

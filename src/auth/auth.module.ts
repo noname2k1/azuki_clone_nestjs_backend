@@ -11,9 +11,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { RolesGuard } from '../guards/roles.guard';
-import { BeanModule } from '@/bean/bean.module';
-import { AzukiModule } from '@/azuki/azuki.module';
-import { SongModule } from '@/song/song.module';
+import { BeanModule } from '../bean/bean.module';
+import { AzukiModule } from '../azuki/azuki.module';
+import { SongModule } from '../song/song.module';
 @Module({
   imports: [
     MongooseModule.forFeature([

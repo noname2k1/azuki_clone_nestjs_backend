@@ -2,14 +2,14 @@ import { Bean, BeanSchema } from './../schemas/Bean.schema';
 import { Module } from '@nestjs/common';
 import { AdminController } from './admin.controller';
 import { AdminService } from './admin.service';
-import { AzukiModule } from '@/azuki/azuki.module';
-import { BeanModule } from '@/bean/bean.module';
+import { AzukiModule } from '../azuki/azuki.module';
+import { BeanModule } from '../bean/bean.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserSchema } from '../schemas/User.schema';
-import { UsersModule } from '@/users/users.module';
-import { SongModule } from '@/song/song.module';
+import { UsersModule } from '../users/users.module';
+import { SongModule } from '../song/song.module';
 import { AzukiSchema } from '../schemas/Azuki.schema';
 import { SongSchema } from '../schemas/Song.schema';
 
