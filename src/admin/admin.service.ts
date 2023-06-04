@@ -1,4 +1,4 @@
-import HandleError from '@/common/HandleError';
+import HandleError from '../common/HandleError';
 import { AzukiDocument } from '@/schemas/Azuki.schema';
 import { BeanDocument } from '@/schemas/Bean.schema';
 import { SongDocument } from '@/schemas/Song.schema';

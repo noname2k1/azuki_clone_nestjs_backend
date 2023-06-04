@@ -1,4 +1,4 @@
-import HandleError from '@/common/HandleError';
+import HandleError from '../common/HandleError';
 import { Strategy } from 'passport-local';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, HttpStatus } from '@nestjs/common';
