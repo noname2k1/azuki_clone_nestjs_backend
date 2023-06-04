@@ -1,6 +1,5 @@
 import { UpdateAzukiDto } from './../Dtos/azuki/updateAzukiDto';
-import { CreateAzukiDto } from '@/Dtos/azuki/createAzuki.dto';
-import { AzukiService } from '@/azuki/azuki.service';
+import { AzukiService } from '../azuki/azuki.service';
 import {
   Body,
   Controller,
