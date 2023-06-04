@@ -7,11 +7,11 @@ import { BeanModule } from '@/bean/bean.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserSchema } from '@/schemas/User.schema';
+import { UserSchema } from '../schemas/User.schema';
 import { UsersModule } from '@/users/users.module';
 import { SongModule } from '@/song/song.module';
-import { AzukiSchema } from '@/schemas/Azuki.schema';
-import { SongSchema } from '@/schemas/Song.schema';
+import { AzukiSchema } from '../schemas/Azuki.schema';
+import { SongSchema } from '../schemas/Song.schema';
 
 @Module({
   imports: [

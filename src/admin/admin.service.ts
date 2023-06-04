@@ -1,8 +1,8 @@
 import HandleError from '../common/HandleError';
-import { AzukiDocument } from '@/schemas/Azuki.schema';
-import { BeanDocument } from '@/schemas/Bean.schema';
-import { SongDocument } from '@/schemas/Song.schema';
-import { UserDocument } from '@/schemas/User.schema';
+import { AzukiDocument } from '../schemas/Azuki.schema';
+import { BeanDocument } from '../schemas/Bean.schema';
+import { SongDocument } from '../schemas/Song.schema';
+import { UserDocument } from '../schemas/User.schema';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';

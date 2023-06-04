@@ -2,10 +2,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Module } from '@nestjs/common';
 import { BeanService } from './bean.service';
 import { BeanController } from './bean.controller';
-import { BeanSchema } from '@/schemas/Bean.schema';
+import { BeanSchema } from '../schemas/Bean.schema';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { CloudinaryModule } from '@/cloudinary/cloudinary.module';
+import { CloudinaryModule } from '../cloudinary/cloudinary.module';
 
 @Module({
   imports: [

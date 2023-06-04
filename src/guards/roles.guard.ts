@@ -2,7 +2,7 @@ import { JwtService } from '@nestjs/jwt';
 import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { Model } from 'mongoose';
-import { UserDocument } from '@/schemas/User.schema';
+import { UserDocument } from '../schemas/User.schema';
 import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()

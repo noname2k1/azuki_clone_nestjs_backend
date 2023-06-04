@@ -1,6 +1,6 @@
 import { UpdateAzukiDto } from './../Dtos/azuki/updateAzukiDto';
 import { resultDto } from '@/common/resultDto';
-import { AzukiDocument } from '@/schemas/Azuki.schema';
+import { AzukiDocument } from '../schemas/Azuki.schema';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
