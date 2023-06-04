@@ -3,7 +3,7 @@ import { UserDocument } from './../schemas/User.schema';
 import { Injectable, HttpStatus } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Bcrypt } from '@/utils/Bcrypt';
+import { Bcrypt } from '../utils/Bcrypt';
 import { UserDto } from '@/Dtos/UserDto';
 
 // This should be a real class/interface representing a user entity

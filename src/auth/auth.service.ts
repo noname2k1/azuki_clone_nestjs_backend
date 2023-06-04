@@ -5,7 +5,7 @@ import HandleError from '../common/HandleError';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UserDocument } from '../schemas/User.schema';
-import { Bcrypt } from '@/utils/Bcrypt';
+import { Bcrypt } from '../utils/Bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import DeviceDetector = require('node-device-detector');
 import { Request, Response } from 'express';
