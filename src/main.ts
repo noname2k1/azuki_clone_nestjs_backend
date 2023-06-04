@@ -9,20 +9,8 @@ async function bootstrap() {
   app.setGlobalPrefix('api/v1');
   app.enableCors({
     origin: process.env.FRONT_END_ORIGIN,
-    allowedHeaders:
-      'Origin, X-Requested-With, Content-Type, Accept, Authorization',
     credentials: true,
-    methods: [
-      'GET',
-      'POST',
-      'PUT',
-      'DELETE',
-      'PATCH',
-      'OPTIONS',
-      'HEAD',
-      'CONNECT',
-      'TRACE',
-    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   });
   app.useGlobalPipes(new ValidationPipe());
   app.use(cookieParser(process.env.COOKIE_SECRET));
