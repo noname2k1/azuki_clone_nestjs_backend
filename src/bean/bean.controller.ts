@@ -1,4 +1,4 @@
-// import { JwtAuthGuard } from '@/guards/jwt-auth.guard';
+// import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { CreateBeanDto } from './../Dtos/bean/createBean.dto';
 import { UpdateBeanDto } from './../Dtos/bean/updateBeanDto';
 import { BeanService } from './bean.service';
@@ -15,7 +15,7 @@ import {
   Request,
   // UseGuards,
 } from '@nestjs/common';
-// import { RolesGuard } from '@/guards/roles.guard';
+// import { RolesGuard } from '../guards/roles.guard';
 // import { Roles } from '@/decorators/roles.decorator';
 
 @Controller('bean')

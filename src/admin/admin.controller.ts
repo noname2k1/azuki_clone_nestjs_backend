@@ -16,9 +16,9 @@ import {
   MaxFileSizeValidator,
   FileTypeValidator,
 } from '@nestjs/common';
-import { JwtAuthGuard } from '@/guards/jwt-auth.guard';
+import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { UseGuards } from '@nestjs/common';
-import { RolesGuard } from '@/guards/roles.guard';
+import { RolesGuard } from '../guards/roles.guard';
 import { Roles } from '@/decorators/roles.decorator';
 import { AdminService } from './admin.service';
 import { SongService } from '@/song/song.service';
