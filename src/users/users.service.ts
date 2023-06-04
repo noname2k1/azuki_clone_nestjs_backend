@@ -1,4 +1,4 @@
-import { HandleError } from '@/common/HandleError';
+import HandleError from '@/common/HandleError';
 import { UserDocument } from './../schemas/User.schema';
 import { Injectable, HttpStatus } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';

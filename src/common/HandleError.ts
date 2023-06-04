@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-export class HandleError {
+export default class HandleError {
   constructor(status?: HttpStatus, errorMsg?: string) {
     // default: status: 500
     if (!status || !errorMsg) {
