@@ -1,6 +1,6 @@
 import { CreateBeanDto } from './../Dtos/bean/createBean.dto';
 import { UpdateBeanDto } from './../Dtos/bean/updateBeanDto';
-import { resultDto } from '@/common/resultDto';
+import { resultDto } from '../common/resultDto';
 import { BeanDocument } from '../schemas/Bean.schema';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';

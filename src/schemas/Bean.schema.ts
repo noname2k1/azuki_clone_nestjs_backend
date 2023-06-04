@@ -1,5 +1,5 @@
 // import { Expose } from 'class-transformer';
-import { baseDto } from '@/common/baseDto';
+import { baseDto } from '../common/baseDto';
 import { Prop, Schema, SchemaFactory, raw } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 

@@ -1,4 +1,4 @@
-import { baseDto } from '@/common/baseDto';
+import { baseDto } from '../common/baseDto';
 import { Expose } from 'class-transformer';
 import { IsNotEmpty } from 'class-validator';
 
