@@ -24,7 +24,7 @@ import { AdminService } from './admin.service';
 import { SongService } from '@/song/song.service';
 import { UsersService } from '@/users/users.service';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { SongDto } from '@/Dtos/SongDto';
+import { SongDto } from '../Dtos/SongDto';
 import { BeanService } from '@/bean/bean.service';
 
 @Controller('admin')

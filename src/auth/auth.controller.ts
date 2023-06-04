@@ -1,4 +1,4 @@
-import { UserDto } from '@/Dtos/UserDto';
+import { UserDto } from '../Dtos/UserDto';
 import {
   Controller,
   Req,

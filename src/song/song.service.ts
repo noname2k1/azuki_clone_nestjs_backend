@@ -1,4 +1,4 @@
-import { SongDto } from '@/Dtos/SongDto';
+import { SongDto } from '../Dtos/SongDto';
 import { CloudinaryService } from '../cloudinary/cloudinary.service';
 import HandleError from '../common/HandleError';
 import { SongDocument } from '../schemas/Song.schema';

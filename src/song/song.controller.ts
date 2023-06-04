@@ -12,7 +12,7 @@ import {
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { SongService } from './song.service';
-import { SongDto } from '@/Dtos/SongDto';
+import { SongDto } from '../Dtos/SongDto';
 
 @Controller('songs')
 export class SongController {

@@ -1,6 +1,6 @@
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
-import { UserDto } from '@/Dtos/UserDto';
+import { UserDto } from '../Dtos/UserDto';
 import HandleError from '../common/HandleError';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
